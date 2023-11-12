@@ -36,7 +36,7 @@ class Simhash implements SimilarityInterface, DistanceInterface
      * @param integer  $len  The length of the simhash in bits
      * @param callable $hash The hash function to compute the hashes of the features
      */
-    public function __construct($len,$hash='self::md5')
+    public function __construct($len, $hash = [self::class, 'md5'])
     {
         $this->length = $len;
         $this->h = $hash;
